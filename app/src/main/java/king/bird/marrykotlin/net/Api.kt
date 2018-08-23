@@ -12,8 +12,8 @@ package king.bird.marrykotlin.net
 class Api {
 
     companion object {
-        //val baseUrl = "https://pengmaster.com/party/mobile/mobileIn.do"
-        val baseUrl = "http://192.168.1.18:8080/party/mobile/mobileIn"
+//        val baseUrl = "https://pengmaster.com/party/mobile/mobileIn.do"
+        val baseUrl = "http://192.168.1.18:8080/girls/mobile/mobileIn"
 
         val girlImage = "GET_GIRL_IMAGE"
     }

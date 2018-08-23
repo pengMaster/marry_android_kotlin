@@ -23,6 +23,7 @@ class MainActivity : BaseActivity() {
         get() = R.layout.activity_main
 
     override fun initData() {
+
         downLoadList()
     }
 
@@ -31,7 +32,7 @@ class MainActivity : BaseActivity() {
         NetWorkUtilsK.doPostJson(Api.baseUrl,"",Api.girlImage,
                 object : OnRequestListener {
             override fun onSuccess(t: String) {
-                var fromJson = Gson().fromJson(t, ImageParser::class.java)
+                val fromJson = Gson().fromJson(t, ImageParser::class.java)
                  resultList = fromJson.resultList as ArrayList<ImageParser.ResultListBean>
                 LogUtils.e(t)
                 initBanner()
@@ -63,7 +64,7 @@ class MainActivity : BaseActivity() {
         banner.loadImage(XBanner.XBannerAdapter { banner, model, view, position ->
             //在此处使用图片加载框架加载图片，demo中使用glide加载，可替换成自己项目中的图片加载框架
             val imageView = view as ImageView
-            var bean = model as ImageParser.ResultListBean
+            val bean = model as ImageParser.ResultListBean
             imageView.scaleType = ImageView.ScaleType.CENTER_CROP
             Glide.with(this@MainActivity).load(bean.imageUrl).placeholder(R.drawable.default_image).error(R.drawable.default_image).into(imageView)
         })
