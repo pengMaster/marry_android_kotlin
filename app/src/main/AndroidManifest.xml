@@ -23,13 +23,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".act.ImageDetail" />
-
-
-        <activity android:name=".act.MainActivity1" />
-
-        <!--<activity android:name=".act.NetWorkTest" />-->
-
 
 
     </application>

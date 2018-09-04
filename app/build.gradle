@@ -33,7 +33,7 @@ dependencies {
     implementation 'jp.wasabeef:glide-transformations:2.0.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
-    compile files('libs/okhttputils-2_6_2.jar')
+    implementation files('libs/okhttputils-2_6_2.jar')
     implementation "org.jetbrains.anko:anko-common:$anko_version"
     implementation 'org.kie.modules:com-google-code-gson:6.5.0.Final'
     //okHttp3

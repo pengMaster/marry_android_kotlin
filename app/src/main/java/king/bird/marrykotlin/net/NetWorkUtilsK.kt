@@ -3,8 +3,8 @@ package king.bird.marrykotlin.net
 import com.google.gson.Gson
 import com.zhy.http.okhttp.OkHttpUtils
 import com.zhy.http.okhttp.callback.StringCallback
-import jameson.io.library.util.LogUtils
 import king.bird.marrykotlin.iface.OnRequestListener
+import king.bird.marrykotlin.util.LogUtils
 import king.bird.marrykotlin.util.ToastUtils
 import okhttp3.Call
 import okhttp3.MediaType

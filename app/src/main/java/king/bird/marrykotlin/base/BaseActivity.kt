@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity
  *     author : Wp
  *     e-mail : 18141924293@163.com
  *     time   : 2018/08/02
- *     desc   :
+ *     desc   : Base可扩展
  *     version: 1.0
  * </pre>
  */
