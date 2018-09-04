@@ -38,7 +38,7 @@ open class NetWorkUtilsK {
                                 LogUtils.e("\n"+"-----------NetWork.onResponse---------"+"\n"+s)
                                 listener?.onSuccess(s)
                             } catch (e: Exception) {
-                                ToastUtils.showToast(e.message)
+                                ToastUtils.showToast(e.message!!)
                             }
 
                         }
