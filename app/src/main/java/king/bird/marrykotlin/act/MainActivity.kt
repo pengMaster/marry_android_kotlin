@@ -1,6 +1,7 @@
 package king.bird.marrykotlin.act
 
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.widget.AdapterView
 import com.bumptech.glide.Glide
@@ -19,6 +20,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener
 import king.bird.marrykotlin.adapter.GridAdapter
+import king.bird.marrykotlin.util.ToastUtils
 import king.bird.spiderlib.SpiderUtil.Companion.getImageByUrl
 
 
@@ -37,7 +39,7 @@ class MainActivity : BaseActivity(), OnRefreshListener, OnLoadmoreListener {
     private var currentPage : Int = 2
     private var isRefresh : Boolean = true
     private var adapter : GridAdapter? = null
-
+    private var mExitTime: Long? = 0L
 
     override val getLayoutId: Int
         get() = R.layout.activity_main
@@ -97,5 +99,19 @@ class MainActivity : BaseActivity(), OnRefreshListener, OnLoadmoreListener {
                 }
             }
         })
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (System.currentTimeMillis() - mExitTime!! > 2000) {
+                ToastUtils.showToast("再按一次退出程序")
+                mExitTime = System.currentTimeMillis()
+            } else {
+                System.exit(0)
+                finish()
+            }
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
     }
 }
