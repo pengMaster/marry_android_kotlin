@@ -1,4 +1,4 @@
-package king.bird.marrykotlin.image.util;
+package king.bird.marrykotlin.util.image.util;
 
 import android.content.Context;
 import android.graphics.Bitmap;

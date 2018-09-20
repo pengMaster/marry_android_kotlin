@@ -1,14 +1,8 @@
-package king.bird.marrykotlin.image.util;
+package king.bird.marrykotlin.util.image.util;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class BitmapUtils {
     public static int MIN_WIDTH = 100;
