@@ -37,7 +37,7 @@ open class SpiderUtil {
                 body.allElements.forEach {
                     val select = it.select("img")
                     if (null != select && select.size > 0) {
-                        val url = select.attr("data-original")
+                        val url = select.attr("original")
                         val desc = select.attr("alt")
                         var name: String = ""
                         url.split("/").forEach {

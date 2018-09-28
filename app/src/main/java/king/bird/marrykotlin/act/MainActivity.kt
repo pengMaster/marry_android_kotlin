@@ -35,7 +35,7 @@ import king.bird.spiderlib.SpiderUtil.Companion.getImageByUrl
  */
 class MainActivity : BaseActivity(), OnRefreshListener, OnLoadmoreListener {
 
-    private var url : String= "http://www.mzitu.com/tag/ugirls/"
+    private var url : String= "http://www.mmonly.cc/ktmh/dmmn/"
     private var currentPage : Int = 2
     private var isRefresh : Boolean = true
     private var adapter : GridAdapter? = null
@@ -64,7 +64,7 @@ class MainActivity : BaseActivity(), OnRefreshListener, OnLoadmoreListener {
 
     override fun onRefresh(refreshlayout: RefreshLayout?) {
 
-        url = "http://www.mzitu.com/tag/ugirls/"
+        url = "http://www.mmonly.cc/ktmh/dmmn/"
         isRefresh = true
         currentPage= 2
         downLoadImage(url)
@@ -74,7 +74,7 @@ class MainActivity : BaseActivity(), OnRefreshListener, OnLoadmoreListener {
     override fun onLoadmore(refreshlayout: RefreshLayout?) {
 
         isRefresh = false
-        url = "http://www.mzitu.com/tag/ugirls/page/$currentPage/"
+        url = "http://www.mmonly.cc/ktmh/dmmn/list_29_$currentPage.html"
         downLoadImage(url)
         currentPage++
     }

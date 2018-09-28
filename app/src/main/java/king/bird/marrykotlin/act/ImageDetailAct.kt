@@ -56,38 +56,26 @@ class ImageDetailAct : BaseActivity() {
     private fun getUrlListByUrl(url: String): ArrayList<String> {
 
         val list: ArrayList<String> = ArrayList()
-        if (url.contains("20")) {
-            val split = url.split("/20")
-            if (split.size > 1) {
-                val s = url.split("/20")[1]
-                if (s.length > 7) {
-                    val substring = s.substring(0, 6)
-                    val split1 = s.split("_")
-                    if (split1.size > 1) {
-                        val s1 = s.split("_")[1]
-                        val substring1 = s1.substring(0, 3)
-                        for (i in 1..8) {
-                            val ivUrl = "http://i.meizitu.net/20$substring${substring1}0$i.jpg"
-                            list.add(ivUrl)
-                        }
-                    }
-                }
-            }
-
-
-//            if (url.contains("thumbs")) {
-//                for (i in 1..8) {
-//                    val ivUrl = "http://i.meizitu.net/thumbs/20$substring${substring1}0$i.jpg"
-//                    list.add(ivUrl)
-//                }
-//            } else {
-//                for (i in 1..8) {
-//                    val ivUrl = "http://i.meizitu.net/20$substring${substring1}0$i.jpg"
-//                    list.add(ivUrl)
+        list.add(url)
+//        if (url.contains("20")) {
+//            val split = url.split("/20")
+//            if (split.size > 1) {
+//                val s = url.split("/20")[1]
+//                if (s.length > 7) {
+//                    val substring = s.substring(0, 6)
+//                    val split1 = s.split("_")
+//                    if (split1.size > 1) {
+//                        val s1 = s.split("_")[1]
+//                        val substring1 = s1.substring(0, 3)
+//                        for (i in 1..8) {
+//                            val ivUrl = "http://i.meizitu.net/20$substring${substring1}0$i.jpg"
+//                            list.add(ivUrl)
+//                        }
+//                    }
 //                }
 //            }
-
-        }
+//
+//        }
         return list
     }
 }
